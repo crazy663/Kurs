@@ -14,9 +14,9 @@ HEADERS = {
 
 # params=''
 #, params=params
-def get_html(url):
+def get_html(url = 'https://rumble.com/account/channel/subscriptions'):
     r = requests.get(url, headers=HEADERS)
-    get_content(r.text)
+    print(get_content(r.text))
     return
 
 
