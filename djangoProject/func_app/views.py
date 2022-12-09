@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 
-from func_app.func import get_content
+from func_app.func import  get_html
 
 
-def index(request,html ):
-    return HttpResponse(f"Полученный HTML: {get_content(html)}")
+def index(request,url, params ):
+    return HttpResponse(f"Полученный HTML: {get_html(url, params)}")

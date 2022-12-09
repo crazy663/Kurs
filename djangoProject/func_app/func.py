@@ -15,7 +15,8 @@ HEADERS = {
 
 def get_html(url, params=''):
     r = requests.get(url, headers=HEADERS, params=params)
-    return r
+    get_content(r.text)
+    return
 
 
 def get_content(html):
@@ -35,8 +36,7 @@ def get_content(html):
     return chanel
 
 
-html = get_html(URL)
-print(get_content(html.text))
+#html = get_html(URL)
 
 
 # def save_doc(items, path):
