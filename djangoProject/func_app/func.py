@@ -12,9 +12,10 @@ HEADERS = {
     'cookie':'_ga=GA1.2.346463566.1670242121; _gid=GA1.2.696958826.1670242121; G_ENABLED_IDPS=google; G_AUTHUSER_H=0; u_s=VVgCQO646nhbkIELesn; PHPSESSID=gma7bh252ijnrd63b8r5tuflqs617en1; _gat_rumble=1'
 }
 
-
-def get_html(url, params=''):
-    r = requests.get(url, headers=HEADERS, params=params)
+# params=''
+#, params=params
+def get_html(url):
+    r = requests.get(url, headers=HEADERS)
     get_content(r.text)
     return
 
@@ -36,7 +37,7 @@ def get_content(html):
     return chanel
 
 
-#html = get_html(URL)
+html = get_html(URL)
 
 
 # def save_doc(items, path):

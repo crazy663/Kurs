@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 
-from func_app.func import  get_html
+from func_app.func import get_html
 
 
 def index(request,url, params ):
