@@ -1,5 +1,6 @@
 from rest_framework import serializers
 
+
 class ContSerializer(serializers.Serializer):
-    url = serializers.CharField()
+    urlpath = serializers.CharField()
     result = serializers.CharField()

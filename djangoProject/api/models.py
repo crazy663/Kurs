@@ -1,7 +1,8 @@
 from django.db import models
 
+
 # Create your models here.
 class Cont:
-    def __init__(self, url, result):
-        self.url=url
-        self.result=result
+    def __init__(self, urlpath, result):
+        self.urlpath = urlpath
+        self.result = result

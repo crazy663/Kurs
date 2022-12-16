@@ -1,7 +1,9 @@
 from django.http import HttpResponse
 
-from func_app.func import get_html
+from djangoProject import func_app
+from func_app.func import get_content
+from func_app import func
 
 
-def index(request,url, params ):
-    return HttpResponse(f"Полученный HTML: {get_html(url, params)}")
+def index(request, urlpath=None):
+    return HttpResponse(f'<h1> Подписки канала: {func.get_content(urlpath)}</h1>')
